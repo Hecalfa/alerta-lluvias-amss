@@ -1,0 +1,45 @@
+{
+  "modelo": {
+    "accuracy": 0.7390438247011952,
+    "balanced_accuracy": 0.7358081387932134,
+    "precision_lluvia": 0.7420494699646644,
+    "recall_lluvia": 0.7835820895522388,
+    "f1_lluvia": 0.7622504537205081,
+    "baseline_accuracy": 0.5338645418326693,
+    "baseline_f1_lluvia": 0.6961038961038961,
+    "train_start": "2020-01-06",
+    "train_end": "2025-07-05",
+    "test_start": "2025-07-06",
+    "test_end": "2026-11-19",
+    "n_train": 2008,
+    "n_test": 502,
+    "rain_threshold_mm": 1.0
+  },
+  "reporte_clasificacion": {
+    "No lluvia": {
+      "precision": 0.7351598173515982,
+      "recall": 0.688034188034188,
+      "f1-score": 0.7108167770419426,
+      "support": 234.0
+    },
+    "Lluvia": {
+      "precision": 0.7420494699646644,
+      "recall": 0.7835820895522388,
+      "f1-score": 0.7622504537205081,
+      "support": 268.0
+    },
+    "accuracy": 0.7390438247011952,
+    "macro avg": {
+      "precision": 0.7386046436581313,
+      "recall": 0.7358081387932134,
+      "f1-score": 0.7365336153812254,
+      "support": 502.0
+    },
+    "weighted avg": {
+      "precision": 0.7388379585872591,
+      "recall": 0.7390438247011952,
+      "f1-score": 0.7382753932767147,
+      "support": 502.0
+    }
+  }
+}
