@@ -1,4 +1,6 @@
 
+# Para correr el app.py ejecutar en la terminal:   python -m streamlit run app.py
+
 """Aplicación Streamlit: predicción de lluvia y alerta experimental por acumulación."""
 from __future__ import annotations   #mantener la compatibilidad y legibilidad de tipos de datos
 
@@ -227,5 +229,18 @@ if st.button(f"🔍 Evaluar Riesgo y Pronóstico para {opcion_dia} en Vivo", typ
     
     st.info(f"**Recomendación de Protección Civil:**\n\n{recomendacion}\n\n**Contexto de la Zona:**\n{desc_municipio}")
 
+st.subheader(f"Análisis gráfico del comportamiento climático — {municipio}")
+
+#Graficos
+if not clima.empty:
+    gcol1, gcol2 = st.columns(2)
+    with gcol1:
+        st.markdown("**Precipitación diaria (mm)**")
+        grafico_lluvia = clima.set_index('fecha')[['precipitacion_mm']]
+        st.bar_chart(grafico_lluvia)
+    with gcol2:
+        st.markdown("**Tendencia de temperaturas (°C)**")
+        grafico_temp = clima.set_index('fecha')[['temp_max_c', 'temp_min_c']]
+        st.line_chart(grafico_temp)
 
 # Para correr el app.py ejecutar en la terminal:   python -m streamlit run app.py

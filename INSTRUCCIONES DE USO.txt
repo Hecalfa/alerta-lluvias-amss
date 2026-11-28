@@ -1,0 +1,2 @@
+1. El primer paso es ejecutar en la terminal python entreno_modelo.py para entrenar y cargar el modelo
+2. Luego se ejecuta en la terminal python -m streamlit run app.py para cargar el front de streamlit 
